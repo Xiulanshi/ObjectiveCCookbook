@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Person.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    Person *person = [[Person alloc] init];
+//    
+//    person.firstName = @"Steve";
+//    person.lastName = @"Jobs";
+    
+//    [person walkAtKilometerPerHour:3.0f];
+//    [person runAt10KilometersPerHour];
+    
+    Person *steveJobs = [[Person alloc] init];
+    steveJobs.firstName = @"Steve";
+    steveJobs.lastName = @"Jobs";
+    steveJobs.currentHeight = 175.0f;
+    
+    if (steveJobs.currentHeight >= [Person minimumHeightInCentimeters] && steveJobs.currentHeight <= [Person maximumHeightInCentimeters]) {
+    
+    } else {
+        
+    }
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
